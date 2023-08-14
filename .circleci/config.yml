@@ -63,7 +63,7 @@ jobs:
       - restore_cache:
           keys:
             - pre-commit-dot-cache-{{ checksum ".pre-commit-config.yaml" }}
-      - run: pip install pre-commit==1.18.3
+      - run: pip install pre-commit==2.12.1
       - run:
           name: Run pre-commit tests
           command: pre-commit run --all-files
