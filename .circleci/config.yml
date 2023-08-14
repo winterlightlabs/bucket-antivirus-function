@@ -15,10 +15,10 @@ executors:
       - image: docker:17.05.0-ce
   python_test:
     docker:
-      - image: circleci/python:3.7-stretch
+      - image: python:3.9-bullseye
   pre_commit_test:
     docker:
-      - image: circleci/python:3.7-stretch
+      - image: python:3.9-bullseye
 
 jobs:
 
@@ -47,7 +47,7 @@ jobs:
       - restore_cache:
           keys:
             - pre-commit-dot-cache-{{ checksum ".pre-commit-config.yaml" }}
-      - run: sudo pip install pre-commit==2.12.1
+      - run: pip install pre-commit==2.12.1
       - run: pre-commit install-hooks
 
       - save_cache:
@@ -63,7 +63,7 @@ jobs:
       - restore_cache:
           keys:
             - pre-commit-dot-cache-{{ checksum ".pre-commit-config.yaml" }}
-      - run: sudo pip install pre-commit==1.18.3
+      - run: pip install pre-commit==2.12.1
       - run:
           name: Run pre-commit tests
           command: pre-commit run --all-files
@@ -76,8 +76,8 @@ jobs:
       - restore_cache:
           keys:
             - pre-commit-dot-cache-{{ checksum ".pre-commit-config.yaml" }}
-      - run: sudo pip install -r requirements.txt
-      - run: sudo pip install -r requirements-dev.txt
+      - run: pip install -r requirements.txt
+      - run: pip install -r requirements-dev.txt
       - run: nosetests
 
 workflows:
