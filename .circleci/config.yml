@@ -15,10 +15,10 @@ executors:
       - image: docker:17.05.0-ce
   python_test:
     docker:
-      - image: circleci/python:3.9-stretch
+      - image: cimg/python:3.9
   pre_commit_test:
     docker:
-      - image: circleci/python:3.9-stretch
+      - image: cimg/python:3.9
 
 jobs:
 
