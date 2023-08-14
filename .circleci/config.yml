@@ -15,10 +15,10 @@ executors:
       - image: docker:17.05.0-ce
   python_test:
     docker:
-      - image: cimg/python:3.9
+      - image: python:3.9-bullseye
   pre_commit_test:
     docker:
-      - image: cimg/python:3.9
+      - image: python:3.9-bullseye
 
 jobs:
 
