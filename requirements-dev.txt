@@ -4,4 +4,4 @@ boto3
 # Test requirements
 coverage
 mock==5.1.0
-nose
+nose-py3
