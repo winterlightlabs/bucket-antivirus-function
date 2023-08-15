@@ -59,7 +59,7 @@ RUN rpm2cpio nettle*.rpm | cpio -vimd
 
 
 # Copy over the binaries and libraries
-RUN cp /tmp/usr/bin/clamscan /tmp/usr/bin/freshclam /tmp/usr/lib64/* /usr/lib64/libpcre.so.1 /bin/ld /usr/lib64/libbfd-*.amzn2.so /opt/app/bin/
+RUN cp /tmp/usr/bin/clamscan /tmp/usr/bin/freshclam /tmp/usr/lib64/* /usr/lib64/libpcre.so.1 /bin/ld /usr/lib64/libbfd-*.amzn2.so /usr/lib64/libcurl.so.* /opt/app/bin/
 
 # Fix the freshclam.conf settings
 RUN echo "DatabaseMirror database.clamav.net" > /opt/app/bin/freshclam.conf
