@@ -63,7 +63,7 @@ RUN cp /tmp/usr/bin/clamscan /tmp/usr/bin/freshclam /tmp/usr/lib64/* /usr/lib64/
 RUN cp /bin/ld /usr/lib64/libbfd-*.amzn2.so /opt/app/bin/
 
 # Copy shared libraries required for freshclams to run in lambda
-RUN cp /usr/lib64/libcurl.so.4 /usr/lib64/libnghttp2.so.14 /usr/lib64/libidn2.so.0 /usr/lib64/libssh2.so.1 /usr/lib64/libldap-2.4.so.2 /opt/app/bin/
+RUN cp /usr/lib64/libcurl.so.4 /usr/lib64/libnghttp2.so.14 /usr/lib64/libidn2.so.0 /usr/lib64/libssh2.so.1 /usr/lib64/libldap-2.4.so.2 /usr/lib64/liblber-2.4.so.2 /opt/app/bin/
 
 # Fix the freshclam.conf settings
 RUN echo "DatabaseMirror database.clamav.net" > /opt/app/bin/freshclam.conf
