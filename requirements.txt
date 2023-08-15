@@ -1,6 +1,6 @@
 certifi==2023.7.22
 chardet==3.0.4
-datadog==0.26.0
+datadog==0.46.0
 decorator==4.4.2
 idna==2.8
 requests==2.31.0
