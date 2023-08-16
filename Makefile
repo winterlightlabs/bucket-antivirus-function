@@ -55,7 +55,7 @@ test: clean  ## Run python tests
 
 .PHONY: coverage
 coverage: clean  ## Run python tests with coverage
-	python3 -m pytest --cov --cov-config=.coveragerc
+	pytest --cov --cov-config=.coveragerc
 
 .PHONY: scan
 scan: ./build/lambda.zip ## Run scan function locally
