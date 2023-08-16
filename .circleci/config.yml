@@ -78,7 +78,7 @@ jobs:
             - pre-commit-dot-cache-{{ checksum ".pre-commit-config.yaml" }}
       - run: pip install -r requirements.txt
       - run: pip install -r requirements-dev.txt
-      - run: nosetests
+      - run: pytest
 
 workflows:
   version: 2
