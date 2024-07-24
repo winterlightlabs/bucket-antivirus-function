@@ -6,6 +6,7 @@ do
   case $LIB in
     "linux-vdso.so.1")
       echo "Skipping $LIB"
+      # linux-vdso.so.1 is not a normal file
     ;;
     *)
       echo $LIB
