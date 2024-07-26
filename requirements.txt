@@ -4,6 +4,6 @@ datadog==0.46.0
 decorator==5.1.1
 idna==2.10
 requests==2.31.0
-simplejson==3.19.1
+simplejson==3.19.2
 urllib3==1.26.19
 pytz==2023.3
