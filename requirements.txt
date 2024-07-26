@@ -5,5 +5,5 @@ decorator==5.1.1
 idna==2.10
 requests==2.32.2
 simplejson==3.19.2
-urllib3==1.26.19
+urllib3==2.2.2
 pytz==2024.1
