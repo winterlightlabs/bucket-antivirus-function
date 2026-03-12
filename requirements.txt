@@ -6,4 +6,4 @@ idna==2.10
 requests==2.32.4
 simplejson==3.19.2
 urllib3==2.6.3
-pytz==2024.2
+pytz==2026.1.post1
