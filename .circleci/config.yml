@@ -12,7 +12,7 @@ version: "2.1"
 executors:
   primary:
     docker:
-      - image: docker:18.06.3-ce
+      - image: docker:cli
   python_test:
     docker:
       - image: python:3.12-bullseye
