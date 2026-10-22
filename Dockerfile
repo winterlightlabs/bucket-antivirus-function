@@ -13,10 +13,10 @@ COPY copylibs.sh /copylibs.sh
 
 # Install packages
 RUN yum update -y
-RUN yum install -y cpio clamav clamav-update yum-utils tar.x86_64 gzip zip python3.11 python3.11-pip binutils
+RUN yum install -y cpio clamav clamav-update yum-utils tar.x86_64 gzip zip python3 python3-pip binutils
 
 # This had --no-cache-dir, tracing through multiple tickets led to a problem in wheel
-RUN pip3.11 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 RUN rm -rf /root/.cache/pip
 
 # Copy over the binaries and libraries
@@ -38,5 +38,5 @@ RUN ldconfig
 WORKDIR /opt/app
 RUN zip -r9 --exclude="*test*" /opt/app/build/lambda.zip *.py bin
 
-WORKDIR /usr/local/lib/python3.11/site-packages
+WORKDIR /usr/local/lib/python3.14/site-packages
 RUN zip -r9 /opt/app/build/lambda.zip *
