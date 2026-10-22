@@ -1,4 +1,4 @@
-FROM amazonlinux:2023
+FROM amazonlinux:2027
 
 # Set up working directories
 RUN mkdir -p /opt/app
